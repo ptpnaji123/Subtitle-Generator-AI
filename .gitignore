@@ -1,0 +1,41 @@
+# Secrets
+.env
+.env.*
+credentials.json
+client_secret*.json
+token.json
+*.pem
+*.key
+
+# Generated / downloaded at runtime
+output_captions/
+drive_downloads/
+caption_temp/
+models/
+.models/
+
+# Your own audio, video and captions (private recordings and transcripts)
+*.srt
+*.amr
+*.mp3
+*.wav
+*.m4a
+*.mp4
+*.mov
+*.mkv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+repomix-output*
