@@ -14,8 +14,6 @@ of media files, or a Google Drive file/folder link.
 -   Accepts a local audio/video file, a local folder, a Google Drive
     file link/ID, or a Google Drive folder link/ID.
 -   Uses FFmpeg and FFprobe to support media processing.
--   Saves generated subtitle files in the project's `output_captions/`
-    folder when configured to do so.
 
 ## Requirements
 
@@ -70,15 +68,6 @@ If the project includes `requirements.txt`:
 python -m pip install -r requirements.txt
 ```
 
-If `requirements.txt` is not present, install the dependencies specified
-by the project source. The script also suggests `requests-toolbelt` for
-an optional live upload progress bar:
-
-``` powershell
-python -m pip install requests-toolbelt
-```
-
-`requests-toolbelt` is optional; uploads can still work without it.
 
 ### 4. Install FFmpeg
 
@@ -153,12 +142,7 @@ configuration.
 
 ## Output
 
-Generated subtitle files use the SubRip format (`.srt`). The intended
-output folder is:
-
-``` text
-output_captions/
-```
+Generated subtitle files use the SubRip format (`.srt`).
 
 Check the script's `process_video()` function if outputs are being saved
 beside local media files instead. To always save captions in
@@ -259,18 +243,3 @@ Suggested `.gitignore` entries:
 __pycache__/
 output_captions/
 ```
-
-## Limitations
-
--   Transcription requires API connectivity and may be subject to model
-    availability, request limits, file-size limits, and usage costs.
--   Accuracy depends on audio quality, accents, background noise, and
-    language mixing.
--   The exact supported formats, model options, and Google Drive
-    behavior depend on the implementation in
-    `auto_caption_generator.py`.
-
-## License
-
-Add the license applicable to your project before distributing it
-publicly.
